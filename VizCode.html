@@ -6,6 +6,25 @@
         min-height: 100%;
         width: 100%;
         min-width: 100%;
+
+    }
+    .nv-area.nv-area-0{
+        fill: green!important;
+    }
+    .nv-area.nv-area-1{
+        fill: yellow!important;
+    }
+    .nv-area.nv-area-2{
+        fill: orange!important;
+    }
+    .nv-area.nv-area-3{
+        fill: red!important;
+    }
+    .nv-area.nv-area-4{
+        fill: purple!important;
+    }
+    .nv-legendWrap{
+        visibility: hidden!important;
     }
 </style>
 
@@ -94,6 +113,6 @@ csv.data.push(['purple', "2015-2016",0]);
   var stackedAreaChart = new dex.charts.nvd3.StackedAreaChart({
       'parent': '#Nvd3_StackedAreaChartParent',
       'csv': csv
-    }
-  ).render();
+    }).render();
+
 </script>
