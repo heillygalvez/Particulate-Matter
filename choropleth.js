@@ -71,7 +71,7 @@ tip.offset(function(d) { // [top, left]
   return [-10, 0];
 })
 
-d3.select('body')
+d3.select('#choropleth')
     .style('overflow', 'hidden');
 
 const parentWidth = d3.select('body').node().getBoundingClientRect().width;
@@ -111,8 +111,8 @@ const path = d3.geoPath().projection(projection);
 svg.call(tip);
 
 queue()
-  .defer(d3.json, 'world_countries.json')
-  .defer(d3.tsv, 'world_population.tsv')
+  .defer(d3.json, 'https://rawgit.com/heillygalvez/Particulate-Matter/master/world_countries.json')
+  .defer(d3.tsv, 'https://rawgit.com/heillygalvez/Particulate-Matter/master/world_population.tsv')
   .await(ready);
 
 function ready(error, geography, data) {
